@@ -133,7 +133,7 @@ bool ESP32BLE::ble_setup_() {
     return false;
   }
 
-  esp_ble_io_cap_t iocap = ESP_IO_CAP_NONE;
+  esp_ble_io_cap_t iocap = ESP_IO_CAP_IO;
   err = esp_ble_gap_set_security_param(ESP_BLE_SM_IOCAP_MODE, &iocap, sizeof(uint8_t));
   if (err != ESP_OK) {
     ESP_LOGE(TAG, "esp_ble_gap_set_security_param failed: %d", err);
